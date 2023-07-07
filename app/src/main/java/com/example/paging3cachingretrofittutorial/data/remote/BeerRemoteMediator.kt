@@ -35,10 +35,11 @@ class BeerRemoteMediator(
                     if(lastItem == null){
                         1
                     }else{
-//                        val currentTotalSize = state.pages
-//                            .flatMap { it.data }
-//                            .size
-//                        Log.d("BeerRemoteMediator", "@aditya " +state.pages + currentTotalSize )
+                        //this seems to be the available items only in screen.
+                        val currentTotalSize = state.pages
+                            .flatMap { it.data }
+                            .size
+                        Log.d("BeerRemoteMediator", "@aditya " +state.pages + currentTotalSize+ "" + lastItem.id )
                         (lastItem.id / state.config.pageSize) + 1
                     }
 

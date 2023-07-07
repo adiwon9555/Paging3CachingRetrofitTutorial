@@ -49,11 +49,13 @@ fun BeerScreen(
                         BeerItem(beer = beer)
                     }
                 }
-                if(beers.loadState.append is LoadState.Loading){
-                    item{
+
+                item {
+                    if (beers.loadState.append is LoadState.Loading) {
                         CircularProgressIndicator()
                     }
                 }
+
 
             }
         }
